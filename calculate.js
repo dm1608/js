@@ -11,7 +11,7 @@ const calculator = {
   divide: function(a, b) {
     return a / b;
   },
-  bitwiseAnd: function(a, b) {
+  bitwiseAND: function(a, b) {
     return a & b;
   },
   bitwiseOR: function(a, b) {
@@ -60,13 +60,13 @@ const calculator = {
           result = this.divide(operands[0], operands[1]);
           break;
         case '&':
-          result = this.divide(operands[0], operands[1]);
+          result = this.bitwiseAND(operands[0], operands[1]);
           break;
         case '|':
-          result = this.divide(operands[0], operands[1]);
+          result = this.bitwiseOR(operands[0], operands[1]);
           break;
         case '^':
-          result = this.divide(operands[0], operands[1]);
+          result = this.bitwiseXOR(operands[0], operands[1]);
           break;
         case '<<':
           result = this.bitwiseShiftLeft(operands[0], operands[1]);
