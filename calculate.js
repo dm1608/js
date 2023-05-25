@@ -11,6 +11,15 @@ const calculator = {
   divide: function(a, b) {
     return a / b;
   },
+  bitwiseAnd: function(a, b) {
+    return a & b;
+  },
+  bitwiseOR: function(a, b) {
+    return a | b;
+  },
+  bitwiseXOR: function(a, b) {
+    return a ^ b;
+  },
   bitwiseShiftLeft: function(a, b) {
     return a << b;
   },
@@ -19,12 +28,12 @@ const calculator = {
   },
   runCalculator: function() {
     while (true) {
-      const input = prompt("계산을 입력하세요 (예: 1+3):");
+      const input = prompt("계산을 입력하세요 :");
       if (input === "q") {
         break;
       }
       
-      const operators = ['+', '-', '*', '/', '<<', '>>'];
+      const operators = ['+', '-', '*', '/', '&', '|', '^', '<<', '>>'];
       let operator, operands;
       
       for (const op of operators) {
@@ -48,6 +57,15 @@ const calculator = {
           result = this.multiply(operands[0], operands[1]);
           break;
         case '/':
+          result = this.divide(operands[0], operands[1]);
+          break;
+        case '&':
+          result = this.divide(operands[0], operands[1]);
+          break;
+        case '|':
+          result = this.divide(operands[0], operands[1]);
+          break;
+        case '^':
           result = this.divide(operands[0], operands[1]);
           break;
         case '<<':
